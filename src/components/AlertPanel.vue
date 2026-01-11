@@ -440,7 +440,7 @@ async function fetchAlerts(showLoading = true) {
   
   try {
     const response = await api.alerts.getAll();
-    alerts.value = response.data.data || [];
+    alerts.value = response.data || [];
   } catch (error) {
     console.error('[AlertPanel] Failed to fetch:', error);
   } finally {
