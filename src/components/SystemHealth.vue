@@ -344,7 +344,7 @@ async function fetchSystems(showLoading = true) {
   
   try {
     const response = await api.systems.getAll();
-    systems.value = response.data.data || [];
+    systems.value = response.data || [];
   } catch (error) {
     console.error('[SystemHealth] Failed to fetch:', error);
   } finally {
