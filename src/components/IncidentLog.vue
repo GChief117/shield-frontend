@@ -496,7 +496,7 @@ async function fetchIncidents(showLoading = true) {
   if (showLoading) loading.value = true;
   try {
     const response = await api.incidents.getAll();
-    incidents.value = response.data.data || [];
+    incidents.value = response.data || [];
   } catch (error) {
     console.error('[IncidentLog] Failed to fetch:', error);
   } finally {
