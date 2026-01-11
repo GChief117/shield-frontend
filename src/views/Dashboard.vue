@@ -567,7 +567,7 @@ const formattedDate = computed(() => {
 async function fetchStats() {
   try {
     const response = await api.dashboard.getStats();
-    stats.value = response.data.data;
+    stats.value = response.data;
     error.value = null;
   } catch (err) {
     console.error('[Dashboard] Failed to fetch stats:', err);
